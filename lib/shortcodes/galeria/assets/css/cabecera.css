@@ -1,0 +1,43 @@
+.iicca-cabecera-galerias{
+
+}
+
+.iicca-cabecera-galerias .contenido{
+    
+}
+
+.iicca-cabecera-galerias .contenido .titulo,
+.iicca-cabecera-galerias .contenido .descripcion,
+.iicca-cabecera-galerias .contenido .etiquetas{
+    text-align: center;
+}
+
+.iicca-cabecera-galerias .contenido .descripcion{
+    margin: 3% 0%;
+}
+
+.iicca-cabecera-galerias .contenido .etiquetas ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.iicca-cabecera-galerias .contenido .etiquetas ul li > a{
+    margin: 0% 8px;
+    font-size: 15px;
+    font-weight: bolder;
+    transition-property: background, color, padding, border-radius;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+.iicca-cabecera-galerias .contenido .etiquetas ul li:hover a{
+    background: #91162f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.iicca-cabecera-galerias .contenido .etiquetas{
+    margin-bottom: 5%;
+}

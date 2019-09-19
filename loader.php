@@ -28,6 +28,9 @@ class IiccaGalerias
     private function shortCodes()
     {
         require_once IICCA_GALERIAS . 'lib/shortcodes/lista-galerias/lista-galerias.php';
-        new IiccaListaGalerias();
+        new IiccaListaGaleriasSc ();
+
+        require_once IICCA_GALERIAS .'lib/shortcodes/galeria/galeria.php';
+        new IiccaGaleriaSc ();
     }
 }
