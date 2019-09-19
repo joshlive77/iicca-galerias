@@ -1,3 +1,12 @@
+.iicca-galerias .eltdf-tabs-nav.ui-tabs-nav{
+    display: flex;
+    justify-content: center;
+}
+
+.iicca-galerias .contenedor-galerias {
+    margin: 5% 0 0 !important;
+}
+
 .iicca-lista-galerias{
     display: block;
 }
@@ -11,15 +20,15 @@
 
 .iicca-lista-galerias .galeria .contenedor{
     background: white;
-    height: 98%;
-    width: 96%;
-    padding: 2%;
+    height: 100%;
+    width: 100%;
+    /* padding: 2%; */
     box-shadow: -2px 2px 6px 1px rgba(0,0,0,.05);
     transition-property: background, box-shadow, transform, text-align, overflow;
     transition-duration: .3s, .3s, .3s;
     transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
     overflow: hidden;   
-    border-radius: 7px;
+    border-radius: 0 0 5px;
 }
 
 .iicca-lista-galerias .galeria .contenedor:hover{
@@ -32,7 +41,7 @@
     height: 85%;
     width: 100%;
     overflow: hidden;
-    transition-property:border-radius;
+    /* transition-property:border-radius; */
     transition-duration: .4s;
     transition-timing-function: ease-in-out;
 }
@@ -41,7 +50,7 @@
     height: 85%;
     width: 100%;
     overflow: hidden;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 
 .iicca-lista-galerias .galeria .contenedor .imagen img{
@@ -62,7 +71,7 @@
 
 .iicca-lista-galerias .galeria .contenedor .contenido{
     background: white;
-    margin-left: 8%;
+    margin-left: 5%;
     width: 80%;
     transition-property: box-shadow, transform, border-radius, padding;
     transition-duration: .4s;
@@ -70,40 +79,55 @@
 }
 
 .iicca-lista-galerias .galeria .contenedor:hover .contenido{
-    transform: translateY(-80px);
-    border-radius: 10px;
+    transform: translateY(-40%);
+    /* border-radius: 10px; */
     box-shadow: -2px 2px 6px 1px rgba(0,0,0,.05);
-    padding: 2%;
+    padding: 5%;
 }
 
 .iicca-lista-galerias .galeria .contenedor .contenido .titulo{
-    text-align: center;
+    /* transition-property: text-align;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out; */
+}
+
+.iicca-lista-galerias .galeria .contenedor:hover .contenido .titulo{
+    /* text-align: center; */
 }
 
 .iicca-lista-galerias .galeria .contenedor .contenido .titulo h3{
-    font-size: 25px;
-    color: #91162f;
+    font-size: 22px;
+    font-family: Poppins;
+    color: #42495b;
+    font-weight: 700;
     font-weight: bolder;
     transition-property: margin, color;
     transition-duration: .4s;
     transition-timing-function: ease-in-out;
+    margin: 15px 0;
 }
 
 .iicca-lista-galerias .galeria .contenedor:hover .contenido .titulo h3{
     margin: 2px;
-    color: #e2a94e;
+    color: #91162f;
     transition-property: color;
     transition-duration: .3s;
     transition-timing-function: ease-in-out;
 }
 
 .iicca-lista-galerias .galeria .contenedor:hover .contenido .titulo:hover h3{
-    color: #91162f;
+    color: #e2a94e ;
+}
+
+.iicca-lista-galerias .galeria .contenedor .contenido .etiquetas{
+    /* border-bottom: 1px solid #ebebeb;
+    padding-bottom: 5px; */
+    margin-bottom: 5px;
 }
 
 .iicca-lista-galerias .galeria .contenedor .contenido .etiquetas span{
     color: white;
-    font-size: 15px;
+    font-size: 14px;
     margin-right: 2%;
     transition-property: color;
     transition-duration: .4s;
@@ -111,13 +135,13 @@
 }
 
 .iicca-lista-galerias .galeria .contenedor:hover .contenido .etiquetas span{
-    color: #91162f;
+    color:  #e2a94e;
     transition-property: color;
     transition-duration: .2s;
     transition-timing-function: ease-in-out;
 }
 .iicca-lista-galerias .galeria .contenedor:hover .contenido .etiquetas span:hover{
-    color: #e2a94e;
+    color: #91162f;
 }
 
 .iicca-lista-galerias .galeria .contenedor .contenido .descripcion p{
@@ -127,6 +151,12 @@
     transition-property: color;
     transition-duration: .4s;
     transition-timing-function: ease-in-out;
+}
+
+.iicca-lista-galerias .galeria .contenedor:hover .contenido .descripcion{
+    margin-top: 5px;
+    border-top: 1px solid #ebebeb;
+    padding-top: 5px;
 }
 
 .iicca-lista-galerias .galeria .contenedor:hover .contenido .descripcion p{
