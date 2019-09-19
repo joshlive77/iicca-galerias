@@ -36,10 +36,13 @@ class IiccaGaleriaSc
     {
         require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera.php';
         wp_enqueue_style('iicca_cabecera_galeria_style');
+        
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria.php';
         wp_enqueue_style('iicca_galeria_style');
 
+        wp_enqueue_style('modal_style');
         wp_enqueue_style('tingle_style');
+
         // wp_enqueue_script('tingle_script');
         wp_enqueue_script('iicca_geleria_main');
     }
@@ -49,6 +52,7 @@ class IiccaGaleriaSc
         wp_register_style('iicca_cabecera_galeria_style', plugin_dir_url( __FILE__ ). 'assets/css/cabecera.css');
         wp_register_style('iicca_galeria_style', plugin_dir_url( __FILE__ ). 'assets/css/galeria.css');
         wp_register_style('tingle_style', plugin_dir_url( __FILE__ ). 'assets/css/tingle.css');
+        wp_register_style('modal_style', plugin_dir_url( __FILE__ ). 'assets/css/modal.css');
     }
 
     static function scripts()

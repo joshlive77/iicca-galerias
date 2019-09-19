@@ -98,7 +98,7 @@
 .iicca-lista-galerias .galeria .contenedor .contenido .titulo h3{
     font-size: 22px;
     font-family: Poppins;
-    color: #42495b;
+    color: #91162f;
     font-weight: 700;
     font-weight: bolder;
     transition-property: margin, color;
@@ -135,13 +135,19 @@
 }
 
 .iicca-lista-galerias .galeria .contenedor:hover .contenido .etiquetas span{
-    color:  #e2a94e;
+    color: #42495b;
     transition-property: color;
     transition-duration: .2s;
     transition-timing-function: ease-in-out;
 }
 .iicca-lista-galerias .galeria .contenedor:hover .contenido .etiquetas span:hover{
-    color: #91162f;
+    color: #e2a94e;
+}
+
+.iicca-lista-galerias .galeria .contenedor .contenido .descripcion{
+    margin-top: 5px;
+    border-top: 1px solid #ebebeb;
+    padding-top: 5px;
 }
 
 .iicca-lista-galerias .galeria .contenedor .contenido .descripcion p{
@@ -151,12 +157,6 @@
     transition-property: color;
     transition-duration: .4s;
     transition-timing-function: ease-in-out;
-}
-
-.iicca-lista-galerias .galeria .contenedor:hover .contenido .descripcion{
-    margin-top: 5px;
-    border-top: 1px solid #ebebeb;
-    padding-top: 5px;
 }
 
 .iicca-lista-galerias .galeria .contenedor:hover .contenido .descripcion p{
