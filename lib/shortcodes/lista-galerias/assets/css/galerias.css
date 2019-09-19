@@ -1,0 +1,192 @@
+.iicca-lista-galerias{
+    display: block;
+}
+
+.iicca-lista-galerias .galeria{
+    height: 400px;
+    width: 31%;
+    float: left;
+    margin: 0 1% 7%;
+}
+
+.iicca-lista-galerias .galeria .contenedor{
+    background: white;
+    height: 98%;
+    width: 96%;
+    padding: 2%;
+    box-shadow: -2px 2px 6px 1px rgba(0,0,0,.05);
+    transition-property: background, box-shadow, transform, text-align, overflow;
+    transition-duration: .3s, .3s, .3s;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+    overflow: hidden;   
+    border-radius: 7px;
+}
+
+.iicca-lista-galerias .galeria .contenedor:hover{
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.05);
+    background: #fafafa;
+    overflow: visible;
+}
+
+.iicca-lista-galerias .galeria .contenedor .imagen{
+    height: 85%;
+    width: 100%;
+    overflow: hidden;
+    transition-property:border-radius;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+.iicca-lista-galerias .galeria .contenedor:hover .imagen{
+    height: 85%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.iicca-lista-galerias .galeria .contenedor .imagen img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition-property:border-radius, transform;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+.iicca-lista-galerias .galeria .contenedor:hover .imagen img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+}
+
+.iicca-lista-galerias .galeria .contenedor .contenido{
+    background: white;
+    margin-left: 8%;
+    width: 80%;
+    transition-property: box-shadow, transform, border-radius, padding;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+.iicca-lista-galerias .galeria .contenedor:hover .contenido{
+    transform: translateY(-80px);
+    border-radius: 10px;
+    box-shadow: -2px 2px 6px 1px rgba(0,0,0,.05);
+    padding: 2%;
+}
+
+.iicca-lista-galerias .galeria .contenedor .contenido .titulo{
+    text-align: center;
+}
+
+.iicca-lista-galerias .galeria .contenedor .contenido .titulo h3{
+    font-size: 25px;
+    color: #91162f;
+    font-weight: bolder;
+    transition-property: margin, color;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+.iicca-lista-galerias .galeria .contenedor:hover .contenido .titulo h3{
+    margin: 2px;
+    color: #e2a94e;
+    transition-property: color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+.iicca-lista-galerias .galeria .contenedor:hover .contenido .titulo:hover h3{
+    color: #91162f;
+}
+
+.iicca-lista-galerias .galeria .contenedor .contenido .etiquetas span{
+    color: white;
+    font-size: 15px;
+    margin-right: 2%;
+    transition-property: color;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+.iicca-lista-galerias .galeria .contenedor:hover .contenido .etiquetas span{
+    color: #91162f;
+    transition-property: color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+}
+.iicca-lista-galerias .galeria .contenedor:hover .contenido .etiquetas span:hover{
+    color: #e2a94e;
+}
+
+.iicca-lista-galerias .galeria .contenedor .contenido .descripcion p{
+    font-size: 15px;
+    line-height: 20px;
+    color: white;
+    transition-property: color;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+.iicca-lista-galerias .galeria .contenedor:hover .contenido .descripcion p{
+    color: gray;
+}
+
+footer{
+    margin-top: 8%;
+}
+
+/* ------------------------------RESPONSIVE------------------------------ */
+
+/* SAMRTPHONE */
+@media handheld, only screen and (max-width: 767px){
+    .iicca-lista-galerias .galeria {
+        height: 300px;
+        width: 100%;
+        float: left;
+        margin: 0 0% 25%;
+    }
+    .iicca-lista-galerias .galeria .contenedor .imagen {
+        height: 79%;
+        width: 100%;
+    }
+    .wpb_column.vc_column_container.vc_col-sm-12{
+        display: none;
+    }
+}
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px){
+    .iicca-lista-galerias .galeria {
+        height: 270px;
+        width: 47%;
+        float: left;
+        margin: 0 1% 13%;
+    }
+    .iicca-lista-galerias .galeria .contenedor .imagen {
+        height: 77%;
+        width: 100%;
+    }
+}
+/* MINI LAPTOP & IPAD PRO */
+@media (min-width: 1024px) and (max-width: 1365px){
+    .iicca-lista-galerias .galeria {
+        height: 360px;
+        width: 47%;
+        float: left;
+        margin: 0 1.5% 10%;
+    }
+}
+/* LAPTOP */
+@media (min-width: 1366px) and (max-width: 1899px){
+    .iicca-lista-galerias .galeria {
+        height: 350px;
+        width: 31.3%;
+        float: left;
+        margin: 0 1% 8%;
+    }
+}
+/* PC */
+@media (min-width: 1900px){
+
+}

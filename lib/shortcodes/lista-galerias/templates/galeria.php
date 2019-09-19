@@ -1,18 +1,37 @@
-<div class="iicca-lista-galerias">
-    <div class="galeria" style="display: block;">
-        <div class="contenedor">
-            <img class="imagen" src="http://iicca.test/wp-content/uploads/2019/09/bannerinter.jpg">
+<div class="iicca-galeria">
+    <div class="fila">
+        <div class="imagen-grande">
+            <div class="imagen">
+                <img src="http://iicca.test/wp-content/uploads/2019/09/MBA.jpg">
+                <a class="modal" href="" >
+                    <p>soy una imagen</p>
+                </a>
+            </div>
         </div>
-        <div class="contenido">
-            <div class="titulo">
-                <h3>TITULO</h3>
+        <div class="imagen-chica">
+            <div class="imagen">
+                <img src="http://iicca.test/wp-content/uploads/2019/09/MBA.jpg">
+                <a class="modal" href="" >
+                    <p>soy una imagen</p>
+                </a>
             </div>
-            <div class="etiquetas">
-                <span>tag1</span>
-                <span>tag2</span>
+            <div class="imagen">
+                <img src="http://iicca.test/wp-content/uploads/2019/09/MBA.jpg">
+                <a class="modal" href="" >
+                    <p>soy una imagen</p>
+                </a>
             </div>
-            <div class="descripcion">
-                <P>Lorem ipsum dolor sit amet.</P>
+            <div class="imagen">
+                <img src="http://iicca.test/wp-content/uploads/2019/09/MBA.jpg">
+                <a class="modal" href="" >
+                    <p>soy una imagen</p>
+                </a>
+            </div>
+            <div class="imagen">
+                <img src="http://iicca.test/wp-content/uploads/2019/09/MBA.jpg">
+                <a class="modal" href="" >
+                    <p>soy una imagen</p>
+                </a>
             </div>
         </div>
     </div>

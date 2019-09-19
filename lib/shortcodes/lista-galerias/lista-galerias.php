@@ -34,13 +34,19 @@ class IiccaListaGalerias
 
     static function html()
     {
+        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera.php';
+        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/galerias.php';
+        // wp_enqueue_style('iicca_lista_galerias_style');
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria.php';
         wp_enqueue_style('iicca_lista_galeria_style');
     }
 
     static function styles()
     {
-        wp_register_style('iicca_lista_galeria_style', plugin_dir_url( __FILE__ ). 'assets/css/style.css');
+        wp_register_style('iicca_cabecera_galeria_style', plugin_dir_url( __FILE__ ). 'assets/css/cabecera.css');
+        wp_register_style('iicca_lista_galerias_style', plugin_dir_url( __FILE__ ). 'assets/css/galerias.css');
+        wp_register_style('iicca_lista_galeria_style', plugin_dir_url( __FILE__ ). 'assets/css/galeria.css');
     }
 
     static function scripts()
