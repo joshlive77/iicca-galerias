@@ -32,8 +32,8 @@
     object-fit: cover;
 }
 
-.iicca-galeria .fila .imagen-grande .imagen .link-modal,
-.iicca-galeria .fila .imagen-chica .imagen .link-modal{
+.iicca-galeria .fila .imagen-grande .imagen .modal,
+.iicca-galeria .fila .imagen-chica .imagen .modal{
     opacity: 0;
     width: 80%;
     height: 74.5%;
@@ -48,18 +48,18 @@
     padding: 10%;
 }
 
-.iicca-galeria .fila .imagen-grande .imagen .link-modal{
+.iicca-galeria .fila .imagen-grande .imagen .modal{
     height: 73.5%;
     transform: translateY(-101.5%);
 }
 
-.iicca-galeria .fila .imagen-grande:hover .imagen .link-modal,
-.iicca-galeria .fila .imagen-chica .imagen:hover .link-modal{
+.iicca-galeria .fila .imagen-grande:hover .imagen .modal,
+.iicca-galeria .fila .imagen-chica .imagen:hover .modal{
     opacity: 1;
 }
 
-.iicca-galeria .fila .imagen-grande .imagen .link-modal p,
-.iicca-galeria .fila .imagen-chica .imagen .link-modal p{
+.iicca-galeria .fila .imagen-grande .imagen .modal p,
+.iicca-galeria .fila .imagen-chica .imagen .modal p{
     color: white;
 }
 
@@ -101,11 +101,11 @@ footer{
         height: 350px;
         width: 100%;
     }
-    .iicca-galeria .fila .imagen-grande .imagen .link-modal {
+    .iicca-galeria .fila .imagen-grande .imagen .modal {
         height: 78.5%;
         transform: translateY(-102.5%);
     }
-    .iicca-galeria .fila .imagen-chica .imagen .link-modal {
+    .iicca-galeria .fila .imagen-chica .imagen .modal {
         height: 82.5%;
         transform: translateY(-103.5%);
     }
@@ -124,11 +124,11 @@ footer{
         height: 425px;
         width: 100%;
     }
-    .iicca-galeria .fila .imagen-grande .imagen .link-modal {
+    .iicca-galeria .fila .imagen-grande .imagen .modal {
         height: 62.5%;
         transform: translateY(-102.5%);
     }
-    .iicca-galeria .fila .imagen-chica .imagen .link-modal {
+    .iicca-galeria .fila .imagen-chica .imagen .modal {
         height: 71.5%;
         transform: translateY(-103.5%);
     }
@@ -138,21 +138,21 @@ footer{
     .iicca-galeria .fila .imagen-grande, .iicca-galeria .fila .imagen-chica {
         height: 400px;
     }
-    .iicca-galeria .fila .imagen-grande .imagen .link-modal {
+    .iicca-galeria .fila .imagen-grande .imagen .modal {
         height: 80.5%;
         transform: translateY(-101.5%);
     }
-    .iicca-galeria .fila .imagen-chica .imagen .link-modal {
+    .iicca-galeria .fila .imagen-chica .imagen .modal {
         height: 80.5%;
     }
 }
 /* LAPTOP */
 @media (min-width: 1366px) and (max-width: 1899px){
-    .iicca-galeria .fila .imagen-grande .imagen .link-modal {
+    .iicca-galeria .fila .imagen-grande .imagen .modal {
         height: 77.5%;
         transform: translateY(-101.5%);
     }
-    .iicca-galeria .fila .imagen-chica .imagen .link-modal {
+    .iicca-galeria .fila .imagen-chica .imagen .modal {
         height: 78.5%;
     }
 }

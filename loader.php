@@ -32,5 +32,6 @@ class IiccaGalerias
 
         require_once IICCA_GALERIAS .'lib/shortcodes/galeria/galeria.php';
         new IiccaGaleriaSc ();
+        
     }
 }

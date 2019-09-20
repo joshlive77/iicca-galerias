@@ -1,7 +1,7 @@
 <div class="iicca-cabecera-galerias">
     <div class="contenido">
         <div class="titulo">
-            <h1>25 Años IICCA</h1>
+            <h1>Entrega de Diplomas SABS 2018</h1>
         </div>
         <!-- <div class="descripcion">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis accusantium voluptatibus. Amet quis quae repellat! Doloremque, ad natus sed, laborum aperiam praesentium, eius totam temporibus iure laboriosam soluta repudiandae.</p>

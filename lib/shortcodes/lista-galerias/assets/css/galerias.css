@@ -98,13 +98,14 @@
 .iicca-lista-galerias .galeria .contenedor .contenido .titulo h3{
     font-size: 22px;
     font-family: Poppins;
+    line-height: 35px;
     color: #91162f;
     font-weight: 700;
     font-weight: bolder;
     transition-property: margin, color;
     transition-duration: .4s;
     transition-timing-function: ease-in-out;
-    margin: 15px 0;
+    /* margin: 15px 0; */
 }
 
 .iicca-lista-galerias .galeria .contenedor:hover .contenido .titulo h3{

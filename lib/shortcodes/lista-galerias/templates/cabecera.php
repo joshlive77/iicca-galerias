@@ -1,11 +1,11 @@
 <div class="iicca-cabecera-galerias">
     <div class="contenido">
         <div class="titulo">
-            <h1>titulo</h1>
+            <h1>Galería de Fotografías</h1>
         </div>
-        <div class="descripcion">
+        <!-- <div class="descripcion">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis accusantium voluptatibus. Amet quis quae repellat! Doloremque, ad natus sed, laborum aperiam praesentium, eius totam temporibus iure laboriosam soluta repudiandae.</p>
-        </div>
+        </div> -->
         <!-- <div class="etiquetas">
             <ul>
                 <li><a href="">tag1</a></li>

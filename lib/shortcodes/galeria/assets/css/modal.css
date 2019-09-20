@@ -41,7 +41,7 @@ html, body {
   }
   
   .popup {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -51,15 +51,15 @@ html, body {
     right: 0;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
-    /* visibility: hidden;
-    opacity: 0; */
-    overflow: hidenn;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hiden;
     transition: .64s ease-in-out;
   }
   .popup-inner {
     position: relative;
-    /* bottom: -100vw;   */
-    /* right: -100vh; */
+    bottom: -100vw;
+    right: -100vh;
     display: flex;
     align-items: center;
     max-width: 800px;
@@ -67,8 +67,8 @@ html, body {
     width: 60%;
     height: 80%;
     background-color: #fff;
-    /* -webkit-transform: rotate(32deg); */
-            /* transform: rotate(32deg); */
+    -webkit-transform: rotate(32deg);
+            transform: rotate(32deg);
     transition: .64s ease-in-out;
   }
   .popup__photo {
@@ -138,15 +138,4 @@ html, body {
   .eltdf-title-holder.eltdf-bg-parallax,
   .eltdf-page-footer{
       z-index: 0 !important;
-  }
-
-
-  .modal{
-    background: #00ffff40;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
   }
