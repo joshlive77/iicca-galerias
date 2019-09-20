@@ -19,7 +19,7 @@
                     <div class="galeria" style="display: block;">
                         <div class="contenedor">
                             <div class="imagen">
-                                <img src="https://iicca.edu.bo/wp-content/uploads/2019/09/N66.jpg">
+                                <img src="https://iicca.edu.bo/wp-content/uploads/2019/09/4.jpg">
                             </div>
                             <div class="contenido">
                                 <div class="titulo">
@@ -47,7 +47,7 @@
                     <div class="galeria" style="display: block;">
                         <div class="contenedor">
                             <div class="imagen">
-                                <img src="https://iicca.edu.bo/wp-content/uploads/2019/09/comex0.jpg">
+                                <img src="https://iicca.edu.bo/wp-content/uploads/2019/09/3.jpg">
                             </div>
                             <div class="contenido">
                                 <div class="titulo">
@@ -75,7 +75,7 @@
                     <div class="galeria" style="display: block;">
                         <div class="contenedor">
                             <div class="imagen">
-                                <img src="https://iicca.edu.bo/wp-content/uploads/2017/10/N2.jpg">
+                                <img src="https://iicca.edu.bo/wp-content/uploads/2019/09/2.jpg">
                             </div>
                             <div class="contenido">
                                 <div class="titulo">
@@ -100,7 +100,7 @@
                     <div class="galeria" style="display: block;">
                         <div class="contenedor">
                             <div class="imagen">
-                                <img src="https://iicca.edu.bo/wp-content/uploads/2019/09/N66.jpg">
+                                <img src="https://iicca.edu.bo/wp-content/uploads/2019/09/1.jpg">
                             </div>
                             <div class="contenido">
                                 <div class="titulo">
