@@ -1,23 +1,23 @@
 <?php
 
 // =============================================================================
-// CUSTOM POST DE GALERIAS
+// CUSTOM POST DE GALERIAS DE IMAGENES
 // =============================================================================
 
 /**
  * Objeto que genera el custom post de galerias
  */
-class IiccaGaleriasCP
+class IiccaImagenesCP
 {
     /**
      * parametros por defecto del custom post
      *
      * @var string
      */
-    private $type       = 'iicca_galerias';
-    private $slug       = 'iicca_galerias_slug';
-    private $plural     = 'Galerias';
-    private $singular   = 'Galeria';
+    private $type       = 'iicca_imagenes';
+    private $slug       = 'iicca_imagenes_slug';
+    private $plural     = 'Imagenes';
+    private $singular   = 'Imagen';
 
     /**
      * contructor
@@ -41,19 +41,20 @@ class IiccaGaleriasCP
             'add_new_item'          => 'Agregar ' . $this->singular,
             'edit_item'             => 'Editar ' . $this->singular,
             'new_item'              => 'Nueva ' . $this->singular,
+            // 'all_items'             => 'Todas las ' . $this->plural,
             'all_items'             => 'Todas las ' . $this->plural,
             'view_item'             => 'Ver ' . $this->plural,
             'search_items'          => 'Buscar ' . $this->plural,
             'not_found'             =>  strtolower($this->plural) . ' no encontrada',
             'not_found_in_trash'    =>  strtolower($this->plural) . ' no encontrada en la basura',
             'parent_item_colon'     => '',
-            'menu_name'             => $this->plural
+            'menu_name'             => 'IICCA galerias'
         );
 
         // taxonomias
         $taxonomies = array(
-            // 'iicca_pub_tipos',
-            // 'organizadores_evento'
+            'iicca_galeria',
+            'iicca_categoria'
         );
 
         // argumentos
@@ -69,8 +70,8 @@ class IiccaGaleriasCP
             'capability_type'       => 'post',
             'has_archive'           => true,
             'hierarchical'          => true,
-            'menu_position'         => 3,
-            'menu_icon'             => 'dashicons-book-alt',
+            'menu_position'         => 4,
+            'menu_icon'             => 'dashicons-format-gallery',
             'supports'              => array( 
                 'title',
                 'editor', 
