@@ -21,8 +21,8 @@ class Tax_Categoria {
      *
      * Setea parametros del custom post
      */
-    private $type               = 'iicca_categoria';
-    private $slug               = 'iicca_categoria_slug';
+    private $type               = 'iicca_gal_cat';
+    private $slug               = 'iicca_gal_cat_slug';
     private $plural             = 'Categorias';
     private $singular           = 'Categoria';
 

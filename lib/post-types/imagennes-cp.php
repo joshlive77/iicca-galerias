@@ -54,7 +54,7 @@ class IiccaImagenesCP
         // taxonomias
         $taxonomies = array(
             'iicca_galeria',
-            'iicca_categoria'
+            'iicca_gal_cat'
         );
 
         // argumentos
