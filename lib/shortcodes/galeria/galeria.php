@@ -42,8 +42,8 @@ class IiccaGaleriaSc
 
     static function html()
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera.php';
-        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera.php';
+        // wp_enqueue_style('iicca_cabecera_galeria_style');
         
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria.php';
         wp_enqueue_style('iicca_galeria_style');
@@ -53,8 +53,8 @@ class IiccaGaleriaSc
     
     static function html1()
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera1.php';
-        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera1.php';
+        // wp_enqueue_style('iicca_cabecera_galeria_style');
         
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria1.php';
         wp_enqueue_style('iicca_galeria_style');
@@ -64,8 +64,8 @@ class IiccaGaleriaSc
     
     static function html2()
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera2.php';
-        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera2.php';
+        // wp_enqueue_style('iicca_cabecera_galeria_style');
         
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria2.php';
         wp_enqueue_style('iicca_galeria_style');
@@ -75,8 +75,8 @@ class IiccaGaleriaSc
     
     static function html3()
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera3.php';
-        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera3.php';
+        // wp_enqueue_style('iicca_cabecera_galeria_style');
         
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria3.php';
         wp_enqueue_style('iicca_galeria_style');
@@ -86,8 +86,8 @@ class IiccaGaleriaSc
     
     static function html4()
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera4.php';
-        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera4.php';
+        // wp_enqueue_style('iicca_cabecera_galeria_style');
         
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria4.php';
         wp_enqueue_style('iicca_galeria_style');
@@ -97,8 +97,8 @@ class IiccaGaleriaSc
     
     static function html5()
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera5.php';
-        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera5.php';
+        // wp_enqueue_style('iicca_cabecera_galeria_style');
         
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria5.php';
         wp_enqueue_style('iicca_galeria_style');
@@ -108,8 +108,8 @@ class IiccaGaleriaSc
     
     static function html6()
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera6.php';
-        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera6.php';
+        // wp_enqueue_style('iicca_cabecera_galeria_style');
         
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria6.php';
         wp_enqueue_style('iicca_galeria_style');
@@ -119,8 +119,8 @@ class IiccaGaleriaSc
     
     static function html7()
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera7.php';
-        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera7.php';
+        // wp_enqueue_style('iicca_cabecera_galeria_style');
         
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria7.php';
         wp_enqueue_style('iicca_galeria_style');
@@ -130,8 +130,8 @@ class IiccaGaleriaSc
     
     static function html8()
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera8.php';
-        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera8.php';
+        // wp_enqueue_style('iicca_cabecera_galeria_style');
         
         require_once plugin_dir_path( __FILE__ ) . 'templates/galeria8.php';
         wp_enqueue_style('iicca_galeria_style');

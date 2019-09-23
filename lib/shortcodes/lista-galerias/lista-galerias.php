@@ -34,8 +34,8 @@ class IiccaListaGaleriasSc
 
     static function html()
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera.php';
-        wp_enqueue_style('iicca_cabecera_galeria_style');
+        // require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera.php';
+        // wp_enqueue_style('iicca_cabecera_galeria_style');
         require_once plugin_dir_path( __FILE__ ) . 'templates/galerias.php';
         wp_enqueue_style('iicca_lista_galerias_style');
         // require_once plugin_dir_path( __FILE__ ) . 'templates/galeria.php';
