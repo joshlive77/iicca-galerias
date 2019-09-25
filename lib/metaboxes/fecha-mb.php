@@ -18,7 +18,7 @@ class MB_fecha
     public function add()
     {
         // Array de custom posts
-        $post = ['iicca_imagenes'];
+        $post = ['iicca_galerias', 'iicca_imagenes'];
         foreach ($post as $post) {
             add_meta_box(
                 // Unique ID

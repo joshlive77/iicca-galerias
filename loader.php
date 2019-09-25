@@ -25,18 +25,20 @@ class IiccaGalerias
     private function customPosts()
     {
         // require_once IICCA_GALERIAS . 'lib/post-types/galerias-cp.php';
-        require_once IICCA_GALERIAS . 'lib/post-types/imagennes-cp.php';
-        new IiccaImagenesCP();
+        require_once IICCA_GALERIAS . 'lib/post-types/imagen-cp.php';
+        new IiccaImagenCP();
+        require_once IICCA_GALERIAS . 'lib/post-types/galeria-cp.php';
+        new IiccaGaleriasCP();
     }
 
     private function taxonomies()
     {
         // require_once IICCA_GALERIAS . 'lib/taxonomies/carpeta-tx.php';
-        require_once IICCA_GALERIAS . 'lib/taxonomies/galeria-tax.php';
-        new Tax_Galeria();
-
         require_once IICCA_GALERIAS . 'lib/taxonomies/categoria-tax.php';
         new Tax_Categoria();
+
+        // require_once IICCA_GALERIAS . 'lib/taxonomies/';
+        // new Tax_Categoria();
     }
 
     private function metaboxes()

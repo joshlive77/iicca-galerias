@@ -4,7 +4,13 @@
 // LISTA DE GALERIAS
 // =============================================================================
 
+
+define('IICCA_GALERIAS_SC_URI', plugin_dir_path( __FILE__ ));
+
 require_once IICCA_GALERIAS . '/include/helpers/queryBuilder.php';
+require_once IICCA_GALERIAS . '/include/helpers/tools.php';
+
+require_once IICCA_GALERIAS . '/include/models/galeria.php';
 
 /**
  * Objero que genera el shortcode de la lsita de galerias
@@ -16,21 +22,67 @@ class IiccaListaGaleriasSc
      */
     function __construct()
     {
-        // genera el template
-        add_shortcode('iicca_lista_galerias_sc', [$this, 'html']);
         // Genera el menu del back
         add_action('vc_before_init', [$this, 'wp_bakery_menu']);
+        // genera el template
+        add_shortcode('iicca_lista_galerias_sc', [$this, 'data']);
         // Carga los estilos css
         add_action('wp_enqueue_scripts', [$this, 'styles']);
         // Carga de scripts
         add_action('wp_enqueue_scripts', [$this, 'scripts']);
     }
 
-    static function data( $categorias = '')
+    /**
+     * Construye los datos del shortcode
+     *
+     * @param [type] $atts
+     * @return void
+     */
+    static function data( $atts )
     {
-        
-    }
+        extract(shortcode_atts(array(
+            'columnas'   => 3,
+            'categorias' => null
+        ), $atts));
 
+        // recupera todas las categorias segun el filtro en el menu del shortcode
+        $categorias = IiccaGaleriaTools::categorias($categorias);
+
+        // array de galerias segun categorias
+        $galerias = array();
+        foreach ($categorias as $term_id => $categoria_name) {
+            if($term_id != 0){
+                // recupera todas las galerias segun el term_id de la categoria
+                $consulta = IiccaGaleriaQuieryBuilder::galeriaPorCat($term_id);
+            } else {
+                // si el term_id es 0 obtenermos todas las galerias
+                $consulta = IiccaGaleriaQuieryBuilder::todasGalerias();
+            }
+            // obtiene los posts
+            $consulta = $consulta->posts;
+            // array de galeria 
+            $galeria = array();
+            // recorre los posts
+            foreach ($consulta as $consult) {
+                // guarda todos los ides de las galerias en el array de galeria
+                $id = $consult->ID;
+                $galeria_object = new GaleriaModel();
+                $galeria_object->setId($id);
+                $galeria_object->setTitulo(get_the_title($id));
+                $galeria_object->setDescripcion(get_the_content(null, false, $id));
+                $galeria_object->setSingle(get_permalink($id));
+                $galeria_object->setImagen(get_the_post_thumbnail_url($id));
+                $galeria_object->setCategorias(get_the_terms($id, 'iicca_gal_cat'));
+
+                array_push($galeria, $galeria_object);
+            }
+            // ingresa las galerias al array de galerias con el nombre de categoria como llave
+            $galerias[$categoria_name] = $galeria;
+        }
+
+        self::html($galerias);
+    }
+    
     /**
      * Genera las opciones del menu del shortcode para el wp bakery
      *
@@ -38,19 +90,21 @@ class IiccaListaGaleriasSc
      */
     static function wp_bakery_menu()
     {
-        $taxonomies = array('iicca_gal_cat');
+        // $taxonomies = array('iicca_gal_cat', array('parent' => 0));
         
-        $args = array(
-            'hide_empty' => 0
-        );
+        // $args = array(
+        //     'hide_empty' => 0
+        // );
 
         // obtiene todas las taxonomias de 'iicca_pub_tipos'
-        $types = get_terms( $taxonomies, $args);
+        $types = get_terms( array( 'taxonomy' => 'iicca_gal_cat'));
         $all_terms = array();
+
+        $all_terms[esc_html__( 'todas', 'iicca-galerias-lista' )] = 'todas';
 
         // agrega cada termino de la taxonomia el array $all_terms
         foreach ($types as $type) {
-            $all_terms[esc_html__( $type->name, 'iicca-galerias-lista' )] = $type->name;
+            $all_terms[esc_html__( $type->name, 'iicca-galerias-lista' )] = $type->term_id;
         }
 
         // opciones del menu
@@ -111,21 +165,8 @@ class IiccaListaGaleriasSc
      * @param [type] $atts
      * @return void
      */
-    static function html($atts)
+    private function html($data)
     {
-        extract(shortcode_atts(array(
-            'columnas'  => 3,
-            'categorias'  => null
-        ), $atts));
-
-        echo $columnas;
-
-        if(!empty($categorias) && !is_null($categorias)){
-            $categorias = explode(',', $categorias);
-        }
-        var_dump($categorias);
-
-
         require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera.php';
         wp_enqueue_style('iicca_cabecera_galeria_style');
         require_once plugin_dir_path( __FILE__ ) . 'templates/galerias.php';

@@ -3,17 +3,18 @@
     <ul class="eltdf-tabs-nav ui-tabs-nav ">
         <?php $cont = 0; ?>
         <?php foreach ($data as $nombre => $categorias) : ?>
-            <li class="ui-state-default ui-tabs-active ">
-                <a href="#cat-<?= $cont++; ?>" class="ui-tabs-anchor" id="ui-id-1"> <?= $nombre ?> </a>
+            <li class="ui-state-default ui-tabs-active <?= $cont == 0 ? 'ui-state-active' : '' ?>">
+                <a href="#tab-bvxcb-114" class="ui-tabs-anchor" id="cat-<?= $cont++; ?>"> <?= $nombre ?> </a>
             </li>
         <?php endforeach; ?>
     </ul>
 
     <?php $cont = 0; ?>
-    <?php foreach ($data as $categoria) : ?>
-        <div class="contenedor-galerias eltdf-tab-container ui-tabs-panel ui-widget-content ui-corner-bottom eltdf-visible" style="" id="cat-<?= $cont++; ?>">
+    <?php foreach ($data as $categoria) : ?>    
+        <div class="contenedor-galerias eltdf-tab-container ui-tabs-panel ui-widget-content ui-corner-bottom <?= $cont == 0 ? 'eltdf-visible' : '' ?>" id="cat-<?= $cont++; ?>">
             <div class="iicca-lista-galerias">
                 <?php foreach ($categoria as $galeria) : ?>
+
                     <div class="galeria" style="display: block;">
                         <div class="contenedor">
                             <div class="imagen">
@@ -21,12 +22,12 @@
                             </div>
                             <div class="contenido">
                                 <div class="titulo">
-                                    <a href=" <?= $galeria->getSingle() ?> ">
+                                    <a href="<?= $galeria->getSingle() ?>">
                                         <h3><?= $galeria->getTitulo() ?></h3>
                                     </a>
                                 </div>
                                 <div class="etiquetas">
-                                    <?php $categorias = $galeria->getCategorias() ?>
+                                    <?php $categorias = $galeria->getategorias() ?>
                                     <?php foreach ($categorias as $tag) : ?>
                                     <a>
                                         <span><?= $tag ?></span>
@@ -39,9 +40,12 @@
                             </div>
                         </div>
                     </div>
+
                 <?php endforeach; ?>
+
             </div>
         </div>
+
     <?php endforeach; ?>
-    
+
 </div>

@@ -1,14 +1,14 @@
 <?php
 
 // =============================================================================
-// 2DA TAXONOMIA
-// CATEGORIA
+// 1ER TAXONOMIA
+// CARPETA
 // =============================================================================
 
 /**
  * Usar namespace para evitar comflictos
  */
-
+// namespace Taxonomy_carpeta;
 /**
  * Class Tax_Categoria
  * @package PostType
@@ -65,14 +65,14 @@ class Tax_Categoria {
             'label'             => $this->plural,
             'labels'            => $labels,
             'rewrite'           => array(
-                'slug'          => 'iicca-galerias-categorias'
+                'slug'          => 'iicca-categorias-categoria'
             ),
             'show_admin_column' => true,
-            'hierarchical'      => false
+            'hierarchical'      => true
         );
 
         // registro de la taxonomia
-        register_taxonomy( $this->type, 'iicca_imagenes', $args);
+        register_taxonomy( $this->type, 'iicca_galerias', $args);
     }
 
 }

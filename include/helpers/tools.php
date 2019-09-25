@@ -71,4 +71,35 @@ class IiccaGaleriaTools
         $date_requested['anio'] = $anio;
         return $date_requested;
     }
+
+    public static function categorias($categorias)
+    {
+        if(!empty($categorias) && !is_null($categorias)){
+            $categorias = explode(',', $categorias);
+            $ids = array();
+            foreach ($categorias as $categoria) {
+                if($categoria == 'todas'){
+                    $ids[0] = 'todas';
+                    // array_push($ids, 0);
+                } else {
+                    $categoria_data = get_term((int)$categoria);
+                    $ids[ (int)$categoria ] = $categoria_data->name;
+                    // array_push($ids, (int)$categoria);
+                }
+            }
+            $categorias = $ids;
+            unset($ids);
+        } else {
+            $categorias = get_terms( array( 'taxonomy' => 'iicca_galeria'));
+            // $ids = array( 0 => 0 );
+            $ids[0] = 'todas';
+            foreach ($categorias as $categoria ) {
+                // array_push($ids, $categoria->term_id);
+                $ids[ $categoria->term_id ] = $categoria->name;
+            }
+            $categorias = $ids;
+            unset($ids);
+        }
+        return $categorias;
+    }
 }

@@ -1,23 +1,23 @@
 <?php
 
 // =============================================================================
-// CUSTOM POST DE GALERIAS DE IMAGENES
+// CUSTOM POST DE GALERIAS DE Galerias
 // =============================================================================
 
 /**
  * Objeto que genera el custom post de galerias
  */
-class IiccaImagenesCP
+class IiccaGaleriasCP
 {
     /**
      * parametros por defecto del custom post
      *
      * @var string
      */
-    private $type       = 'iicca_imagenes';
-    private $slug       = 'iicca_imagenes_slug';
-    private $plural     = 'Imagenes';
-    private $singular   = 'Imagen';
+    private $type       = 'iicca_galerias';
+    private $slug       = 'iicca_galerias_slug';
+    private $plural     = 'Galerias';
+    private $singular   = 'Galeria';
 
     /**
      * contructor
@@ -41,7 +41,6 @@ class IiccaImagenesCP
             'add_new_item'          => 'Agregar ' . $this->singular,
             'edit_item'             => 'Editar ' . $this->singular,
             'new_item'              => 'Nueva ' . $this->singular,
-            // 'all_items'             => 'Todas las ' . $this->plural,
             'all_items'             => 'Todas las ' . $this->plural,
             'view_item'             => 'Ver ' . $this->plural,
             'search_items'          => 'Buscar ' . $this->plural,
@@ -53,7 +52,6 @@ class IiccaImagenesCP
 
         // taxonomias
         $taxonomies = array(
-            'iicca_galeria',
             'iicca_gal_cat'
         );
 
