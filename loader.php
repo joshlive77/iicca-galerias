@@ -45,6 +45,8 @@ class IiccaGalerias
     {
         require_once IICCA_GALERIAS . 'lib/metaboxes/fecha-mb.php';
         new MB_fecha();
+        require_once IICCA_GALERIAS . 'lib/metaboxes/galerias-mb.php';
+        new MB_galerias();
     }
 
     private function shortCodes()

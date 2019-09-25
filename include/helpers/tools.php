@@ -4,46 +4,19 @@
 // HERRAMIENTAS
 // =============================================================================
 
-
-
 /**
  * Objeto de metodos estaticos con funciones utiles para el plugin
  */
 class IiccaGaleriaTools
 {
-    /**
-     * Limita un texto a un conjunto de palabras
-     *
-     * @param string $texto
-     * @param integer $limite
-     * @return string $texto
-     */
-    public static function limitarTexto($texto = '', $limite = 0)
-    {
-        /**
-         * separa el texto por espacios y compone un array con las cadenas
-         */
-        $articulo = explode(' ', $texto);
-        if (count($articulo) > $limite)
-        {
-            /**
-             * si la longitud del array de cadenas es mayor al limite de palabras
-             * devuelve un string compuesto por el numero de cadenas del limite
-             */
-            return implode(' ', array_slice($articulo, 0, $limite)) . '....';
-        }
-        else
-        {
-            /**
-             * si la longitud del array es inferior al limite
-             * devulve el mismo texto
-             */
-            return $texto;
-        }
-    
-    }
 
-    public static function fechaActual(){
+    /**
+     * devuelve la fecha actual segun la zona horaria 
+     *
+     * @return void
+     */
+    public static function fechaActual()
+    {
         $timezone = "America/La_paz";
         $datetime = new datetime("now", new datetimezone($timezone));
         $actualdate = strtotime(gmdate("d-m-Y", (time() + $datetime->getOffset())));
@@ -51,6 +24,12 @@ class IiccaGaleriaTools
         return $actualdate;
     }
 
+    /**
+     * Traduce la fecha en español
+     *
+     * @param [type] $fecha
+     * @return void
+     */
     public static function traducirFecha($fecha)
     {
         $fecha = substr($fecha, 0, 10);
@@ -72,6 +51,12 @@ class IiccaGaleriaTools
         return $date_requested;
     }
 
+    /**
+     * Devulve las categorias
+     *
+     * @param [type] $categorias
+     * @return void
+     */
     public static function categorias($categorias)
     {
         if(!empty($categorias) && !is_null($categorias)){
@@ -90,16 +75,23 @@ class IiccaGaleriaTools
             $categorias = $ids;
             unset($ids);
         } else {
-            $categorias = get_terms( array( 'taxonomy' => 'iicca_galeria'));
-            // $ids = array( 0 => 0 );
+            $categorias = get_terms( array( 'taxonomy' => 'iicca_gal_cat'));
             $ids[0] = 'todas';
             foreach ($categorias as $categoria ) {
-                // array_push($ids, $categoria->term_id);
                 $ids[ $categoria->term_id ] = $categoria->name;
             }
             $categorias = $ids;
             unset($ids);
         }
         return $categorias;
+    }
+
+    public static function nombresGalerias($posts)
+    {
+        $nombres = array();
+        foreach ($posts as $post) {
+            $nombres[$post->ID] = $post->post_title;
+        }
+        return $nombres;
     }
 }

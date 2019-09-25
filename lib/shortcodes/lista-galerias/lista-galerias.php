@@ -41,7 +41,7 @@ class IiccaListaGaleriasSc
     static function data( $atts )
     {
         extract(shortcode_atts(array(
-            'columnas'   => 3,
+            // 'columnas'   => 3,
             'categorias' => null
         ), $atts));
 
@@ -73,6 +73,7 @@ class IiccaListaGaleriasSc
                 $galeria_object->setSingle(get_permalink($id));
                 $galeria_object->setImagen(get_the_post_thumbnail_url($id));
                 $galeria_object->setCategorias(get_the_terms($id, 'iicca_gal_cat'));
+                $publicacion->setFecha(get_post_meta($id, '_fecha_imagen_key', true));
 
                 array_push($galeria, $galeria_object);
             }
@@ -109,17 +110,17 @@ class IiccaListaGaleriasSc
 
         // opciones del menu
         $opciones = array(
-            array(
-                'type'        => 'dropdown',
-                'param_name'  => 'columnas',
-                'heading'     => esc_html__( 'columnas', 'iicca-galerias-lista' ),
-                'value'       => array(
-                    esc_html__( '3', 'iicca-galerias-lista' )  => '3',
-                    esc_html__( '4', 'iicca-galerias-lista' )    => '4',
-                ),
-                'save_always' => true,
-                'group'       => esc_html__( 'Configuraciones', 'iicca-galerias-lista' )
-            ),
+            // array(
+            //     'type'        => 'dropdown',
+            //     'param_name'  => 'columnas',
+            //     'heading'     => esc_html__( 'columnas', 'iicca-galerias-lista' ),
+            //     'value'       => array(
+            //         esc_html__( '3', 'iicca-galerias-lista' )  => '3',
+            //         esc_html__( '4', 'iicca-galerias-lista' )    => '4',
+            //     ),
+            //     'save_always' => true,
+            //     'group'       => esc_html__( 'Configuraciones', 'iicca-galerias-lista' )
+            // ),
             array(
                 'type'        => 'dropdown',
                 'param_name'  => 'filtro',
@@ -175,6 +176,11 @@ class IiccaListaGaleriasSc
         // wp_enqueue_style('iicca_lista_galeria_style');
     }
 
+    /**
+     * Obtiene las rutas para los estilos
+     *
+     * @return void
+     */
     static function styles()
     {
         wp_register_style('iicca_cabecera_galeria_style', plugin_dir_url(__FILE__) . 'assets/css/cabecera.css');
@@ -182,6 +188,11 @@ class IiccaListaGaleriasSc
         wp_register_style('iicca_lista_galeria_style', plugin_dir_url(__FILE__) . 'assets/css/galeria.css');
     }
 
+    /**
+     * Obtiene las rutas para los scripts
+     *
+     * @return void
+     */
     static function scripts()
     {
         wp_register_script('iicca_lista_geleria_main', plugin_dir_url(__FILE__) . 'assets/js/main.js', array('jquery'), '1.1', true);

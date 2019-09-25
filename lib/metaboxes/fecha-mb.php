@@ -85,7 +85,7 @@ class MB_fecha
         // vista de la url
         $field  = '<p>';
         $field .= '    <input type="date" name="campo_fecha_imagen" ';
-        $field .= '    value="'.$fecha.'" required/>';
+        $field .= '    value="'.$fecha.'"/>';
         $field .= '</p>';
 
         echo $field;

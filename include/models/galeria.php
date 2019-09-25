@@ -4,6 +4,8 @@
 // MODELO DE LA GALERIA
 // =============================================================================
 
+require_once IICCA_GALERIAS . '/include/helpers/tools.php';
+
 class GaleriaModel
 {
     private $id;
@@ -12,6 +14,7 @@ class GaleriaModel
     private $imagen;
     private $descripcion;
     private $categorias;
+    private $fecha;
 
     /**
      * Get the value of id
@@ -140,6 +143,30 @@ class GaleriaModel
         } else {
             $this->categorias = $categorias;
         }
+        return $this;
+    }
+
+    /**
+     * Get the value of fecha
+     */ 
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Set the value of fecha
+     *
+     * @return  self
+     */ 
+    public function setFecha($fecha)
+    {
+        if (!empty($fecha)) {
+            $this->fecha = IiccaGaleriaTools::traducirFecha($fecha);
+        } else {
+            $this->fecha = '';
+        }
+
         return $this;
     }
 }

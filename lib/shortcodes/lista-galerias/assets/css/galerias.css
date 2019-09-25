@@ -172,6 +172,12 @@ footer{
 
 /* SAMRTPHONE */
 @media handheld, only screen and (max-width: 767px){
+    .iicca-galerias .eltdf-tabs-nav.ui-tabs-nav {
+        flex-direction: column;
+    }
+    .eltdf-tabs.eltdf-tabs-standard .eltdf-tabs-nav li {
+        text-align: center;
+    }
     .iicca-lista-galerias .galeria {
         height: 300px;
         width: 100%;
