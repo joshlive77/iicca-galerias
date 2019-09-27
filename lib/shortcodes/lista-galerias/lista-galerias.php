@@ -168,9 +168,9 @@ class IiccaListaGaleriasSc
      */
     private function html($data)
     {
-        require_once plugin_dir_path( __FILE__ ) . 'templates/cabecera.php';
+        require plugin_dir_path( __FILE__ ) . 'templates/cabecera.php';
         wp_enqueue_style('iicca_cabecera_galeria_style');
-        require_once plugin_dir_path( __FILE__ ) . 'templates/galerias.php';
+        require plugin_dir_path( __FILE__ ) . 'templates/galerias.php';
         wp_enqueue_style('iicca_lista_galerias_style');
         // require_once plugin_dir_path( __FILE__ ) . 'templates/galeria.php';
         // wp_enqueue_style('iicca_lista_galeria_style');
@@ -186,6 +186,11 @@ class IiccaListaGaleriasSc
         wp_register_style('iicca_cabecera_galeria_style', plugin_dir_url(__FILE__) . 'assets/css/cabecera.css');
         wp_register_style('iicca_lista_galerias_style', plugin_dir_url(__FILE__) . 'assets/css/galerias.css');
         wp_register_style('iicca_lista_galeria_style', plugin_dir_url(__FILE__) . 'assets/css/galeria.css');
+
+        // estilos para single
+        wp_register_style('iicca_cabecera_single_style', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/css/cabecera.css');
+        wp_register_style('iicca_galeria_single_style', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/css/galeria.css');
+        wp_register_style('modal_single_style', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/css/modal.css');
     }
 
     /**

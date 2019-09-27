@@ -1,0 +1,19 @@
+.imagenes{
+    display: flow-root;
+    margin: 2% 0%;
+}
+
+.imagenes .imagen{
+    float: left;
+    width: 29%;
+    height: 390px;
+    margin: 1%;
+    padding: 1%;
+}
+
+.imagenes .imagen > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+

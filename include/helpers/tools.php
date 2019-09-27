@@ -94,4 +94,40 @@ class IiccaGaleriaTools
         }
         return $nombres;
     }
+
+    public static function filtrarImagenes($id_galeria, $consulta)
+    {
+        $imagenes_ids = array();
+        foreach ($consulta as $consult) {
+            $id = $consult->ID;
+            $galerias_ids = get_post_meta($id, '_galerias_imagen_key', true);
+            if(is_array($galerias_ids)):
+                if(in_array($id_galeria, $galerias_ids)):
+                    array_push($imagenes_ids, $id);
+                endif;
+            endif;
+        }
+
+        return $imagenes_ids;
+    }
+
+    public static function orderImagenes($imagenes){
+        $filas = array();
+        $imagenes_chicas = array();
+        foreach ($imagenes as $nro => $imagen) {
+            if($nro == 0 || $nro % 5 == 0){
+                $imagen_grande = $imagen;
+            } else{
+                array_push($imagenes_chicas, $imagen);
+            }
+            if(count($imagenes_chicas) == 4 || count($imagenes) == $nro){
+                $fila = [$imagen_grande, $imagenes_chicas];
+                array_push($filas, $fila);
+                unset($imagen_grande);
+                unset($imagenes_chicas);
+            }
+        }
+
+        return $filas;
+    }
 }
