@@ -94,9 +94,11 @@ class MB_galerias
                         <?=$nombre;?>
                         <input type="checkbox" name="<?=$id?>" value="<?=$id?>" 
                         <?php
+                        if(is_array($galerias_ids)):
                             if(in_array($id, $galerias_ids)):
                             checked($id, $id);
                             endif;
+                        endif;
                         ?>
                         >
                     </td>

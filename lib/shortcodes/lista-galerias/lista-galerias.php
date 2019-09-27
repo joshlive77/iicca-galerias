@@ -73,7 +73,7 @@ class IiccaListaGaleriasSc
                 $galeria_object->setSingle(get_permalink($id));
                 $galeria_object->setImagen(get_the_post_thumbnail_url($id));
                 $galeria_object->setCategorias(get_the_terms($id, 'iicca_gal_cat'));
-                $publicacion->setFecha(get_post_meta($id, '_fecha_imagen_key', true));
+                $galeria_object->setFecha(get_post_meta($id, '_fecha_imagen_key', true));
 
                 array_push($galeria, $galeria_object);
             }
