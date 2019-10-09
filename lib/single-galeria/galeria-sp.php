@@ -15,6 +15,10 @@ class IiccaGaleriaSingle
     function __construct()
     {
         self::data();
+        // Carga los estilos css
+        add_action('wp_enqueue_scripts', [$this, 'styles']);
+        // Carga de scripts
+        add_action('wp_enqueue_scripts', [$this, 'scripts']);
     }
 
     public function data()
@@ -46,11 +50,22 @@ class IiccaGaleriaSingle
         if(!empty($data)){
     
             require IICCA_GALERIA_SP . 'templates/cabecera.php';
-            require IICCA_GALERIA_SP . 'templates/galeria.php';
+            // require IICCA_GALERIA_SP . 'templates/galeria.php';
+            require IICCA_GALERIA_SP . 'templates/prueba_modal.php';
     
+            // styles
+
             wp_enqueue_style('iicca_cabecera_single_style');
             wp_enqueue_style('iicca_galeria_single_style');
-            wp_enqueue_style('modal_single_style');  
+            // wp_enqueue_style('modal_single_style');
+
+            wp_enqueue_style('magnific_popup_style');
+
+            // scripts
+
+            wp_enqueue_script('magnific_popup_script');
+            
+            wp_enqueue_script('modal_single_script');
 
         } else {
             echo '<h1> No existen imagenes en esta galeria </h1>';
