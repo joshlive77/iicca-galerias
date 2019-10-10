@@ -101,7 +101,7 @@ class IiccaListaGaleriasSc
         $types = get_terms( array( 'taxonomy' => 'iicca_gal_cat'));
         $all_terms = array();
 
-        $all_terms[esc_html__( 'todas', 'iicca-galerias-lista' )] = 'todas';
+        $all_terms[esc_html__( 'todas', 'iicca-galerias-lista' )] = 'Todas';
 
         // agrega cada termino de la taxonomia el array $all_terms
         foreach ($types as $type) {

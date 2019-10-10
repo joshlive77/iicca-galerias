@@ -9,9 +9,9 @@
 
                             <div class="iicca-cabecera-galerias">
                                 <div class="contenido">
-                                    <div class="titulo">
+                                    <!-- <div class="titulo">
                                         <h1><?= get_the_title() ?></h1>
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="descripcion">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis accusantium voluptatibus. Amet quis quae repellat! Doloremque, ad natus sed, laborum aperiam praesentium, eius totam temporibus iure laboriosam soluta repudiandae.</p>
             </div> -->
