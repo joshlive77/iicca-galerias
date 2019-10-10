@@ -67,8 +67,18 @@ class IiccaGaleriaSingle
             
             wp_enqueue_script('modal_single_script');
 
+            wp_enqueue_script('pagination');
+
         } else {
-            echo '<h1> No existen imagenes en esta galeria </h1>';
+            
+            wp_enqueue_style('no_imagen');
+
+            ?>
+            <div class="container">
+                <img src="<?= IICCA_GALERIAS_URL . 'lib/shortcodes/lista-galerias/assets/img/image-default.png' ?>" alt="" srcset="">
+                <h3> No existen imagenes en esta galeria </h3>
+            </div>
+            <?php
         }
     }
 

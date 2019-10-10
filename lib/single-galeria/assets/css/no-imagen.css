@@ -1,0 +1,18 @@
+/* estilos para pagina sin imagenes */
+
+.container{
+    height: 80vh;
+    /* text-align: center; */
+    /* list-style: arabic-indic; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container img{
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+}
+

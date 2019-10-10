@@ -3,13 +3,17 @@
     margin: 2% 0%;
 }
 
-.imagenes .imagen{
+.image-container{
+    width: 29%;
+    height: 390px;
     display: block;
     float: left;
-    width: 31%;
-    height: 390px;
-    margin: 1%;
-    /* padding: 1%; */
+    margin: 2%;
+    overflow: hidden;
+}
+
+.imagenes .imagen{
+    overflow: hidden;
     position: relative; 
     z-index: 2;
     text-decoration: none;
@@ -23,29 +27,120 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
-
-.imagenes > .imagen:after{
-    content: "";
-    height: 100%; 
-    left: 0; 
-    top: 0; 
-    width: 0px;  
-    position: absolute; 
     transition: all 0.5s ease-in-out 0s; 
     -webkit-transition: all 0.5s ease-in-out 0s; 
-    z-index: 3;
 }
-
-.imagen:hover:after{ width: 100%; }
-.imagenes:nth-child(2) .imagen:after{ background:linear-gradient(49deg, rgba(73,21,32,0.76234243697479) 0%, rgba(145,22,47,0.5914740896358543) 35%, rgba(226,169,78,0.4542191876750701) 100%); }
 
 .imagenes .imagen:hover > img{
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     transform: scale(1.05);
+    height: 90%;
 }
+
+.imagenes .descripcion{
+    opacity: 0;
+    transition: all 0.7s ease-in-out 0s;
+    -webkit-transition: all 0.7s ease-in-out 0s;
+}
+
+.imagenes .descripcion p{
+    color: #42495b;
+}
+
+.imagenes .image-container:hover .descripcion{
+    opacity: 1;
+}
+
+
+/* estilos de paginacion */
+
+.pagination{
+    text-align: center;
+}
+
+.pagination a{
+    font-size: 2em;
+    font-family: roboto;
+    font-weight: bolder;
+    margin: 0% 0.1%;
+    color: #91162f;
+}
+
+.pagination .page.current{
+    color: #e2a94e;
+}
+
+
+
+/* margen del footer */
 
 footer{
     margin-top: 10%;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/* RESPONSIVE */
+/* -------------------------------------------------------------------------- */
+
+
+/* SAMRTPHONE */
+@media handheld, only screen and (max-width: 767px){
+    .image-container {
+        width: 98%;
+    }
+    .image-container {
+        height: 200px;
+    }
+    .imagenes .imagen:hover > img {
+        height: 85%;
+    }
+    .pagination{
+        margin-top: 10%;
+    }
+}
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px){
+    .image-container {
+        width: 46%;
+    }
+    .image-container {
+        height: 250px;
+    }
+    .imagenes .imagen:hover > img {
+        height: 85%;
+    }
+    .pagination{
+        margin-top: 10%;
+    }
+}
+/* MINI LAPTOP & IPAD PRO */
+@media (min-width: 1024px) and (max-width: 1365px){
+    .image-container {
+        width: 46%;
+    }
+    .image-container {
+        height: 300px;
+    }
+    .imagenes .imagen:hover > img {
+        height: 85%;
+    }
+    .pagination{
+        margin-top: 10%;
+    }
+}
+/* LAPTOP */
+@media (min-width: 1366px) and (max-width: 1899px){
+    .image-container {
+        height: 320px;
+    }
+    .imagenes .imagen:hover > img {
+        height: 85%;
+    }
+}
+/* PC */
+@media (min-width: 1900px){
+
 }

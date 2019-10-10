@@ -190,6 +190,7 @@ class IiccaListaGaleriasSc
         // estilos para single
         wp_register_style('iicca_cabecera_single_style', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/css/cabecera.css');
         wp_register_style('iicca_galeria_single_style', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/css/galeria.css');
+        wp_register_style('no_imagen', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/css/no-imagen.css');
         wp_register_style('modal_single_style', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/css/modal.css');
 
         wp_register_style('magnific_popup_style', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/css/magnific_popup/magnific-popup.css');
@@ -208,5 +209,7 @@ class IiccaListaGaleriasSc
         wp_register_script('modal_single_script', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/js/modal.js', array('jquery'), '1.1', true);
 
         wp_register_script('magnific_popup_script', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/js/magnific_popup/jquery.magnific-popup.js', array('jquery'), '1.1', true);
+        
+        wp_register_script('pagination', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/js/pagination.js', array('jquery'), '1.1', true);
     }
 }
