@@ -94,7 +94,8 @@ class IiccaImagenCP
      */
     public function set_columns($columns) {
         $columns ['iicca_imagenes_fecha_imagen'] = 'Fecha de Publicación';
-        $columns ['featured_image'] = 'Portada';
+        $columns ['iicca_imagenes_galerias'] = 'Galerias';
+        $columns ['featured_image'] = 'Imagen';
         unset($columns['date']);
         return $columns;
     }
@@ -126,6 +127,15 @@ class IiccaImagenCP
                 $fecha = get_post_meta($post_ID, '_fecha_imagen_key', true);
                 $fecha = IiccaGaleriaTools::traducirFecha($fecha);
                 echo $fecha['dia'].'  de '.$fecha['mes'].' de '.$fecha['anio'];
+                break;
+            
+            case 'iicca_imagenes_galerias':
+                $galeria = get_post_meta($post_ID, '_galerias_imagen_key', true);
+                foreach ($galeria as $index => $post ) {
+                    $post_name = get_post($post);
+                    echo '- ' . $post_name->post_title . '<br>';
+                }
+                // var_dump( $galeria );
                 break;
             
             default:
