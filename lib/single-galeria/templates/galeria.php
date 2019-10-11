@@ -1,37 +1,25 @@
-    <div class="iicca-galeria">
+<div class="imagenes zoom-gallery">
 
-        <div class="imagenes">
-
-        <?php foreach($data as $imagen):?>
-
-            <div class="imagen">
-                <img src="<?=$imagen->getImagen()?>">
-                <a class="modal" href="#popup-2">
-                    <p></p>
-                </a>
-                <div class="popup" id="popup-2">
-                    <div class="popup-inner">
-                        <div class="popup__photo">
-                            <img src="<?=$imagen->getImagen()?>" alt="">
-                        </div>
-                        <a class="popup__close" href="#">X</a>
-                    </div>
-                </div>
+    <?php foreach ($data as $imagen) : ?>
+        <div class="image-container">
+            <a class="imagen" href="<?= $imagen->getImagen() ?>" data-source="http://500px.com/photo/32736307" title="<?= $imagen->getTitulo() ?>">
+                <img src="<?= $imagen->getImagen() ?>">
+            </a>
+            <div class="descripcion">
+                <p><?= $imagen->getTitulo() ?></p>
             </div>
-
-        <?php endforeach; ?>
-
         </div>
+    <?php endforeach; ?>
 
-    </div>
+</div>
 
 
-    </div>
-    </div>
-    </div>
-    </div>
+</div>
+</div>
+</div>
+</div>
 
-    </div>
+</div>
 
-    </div>
-    </div>
+</div>
+</div>

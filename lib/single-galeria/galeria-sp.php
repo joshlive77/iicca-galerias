@@ -50,14 +50,12 @@ class IiccaGaleriaSingle
         if(!empty($data)){
     
             require IICCA_GALERIA_SP . 'templates/cabecera.php';
-            // require IICCA_GALERIA_SP . 'templates/galeria.php';
-            require IICCA_GALERIA_SP . 'templates/prueba_modal.php';
+            require IICCA_GALERIA_SP . 'templates/galeria.php';
     
             // styles
 
             wp_enqueue_style('iicca_cabecera_single_style');
             wp_enqueue_style('iicca_galeria_single_style');
-            // wp_enqueue_style('modal_single_style');
 
             wp_enqueue_style('magnific_popup_style');
 

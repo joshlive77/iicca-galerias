@@ -208,7 +208,7 @@ class IiccaListaGaleriasSc
         // scripts para single
         wp_register_script('modal_single_script', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/js/modal.js', array('jquery'), '1.1', true);
 
-        wp_register_script('magnific_popup_script', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/js/magnific_popup/jquery.magnific-popup.js', array('jquery'), '1.1', true);
+        wp_register_script('magnific_popup_script', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/js/magnific_popup/jquery.magnific-popup.min.js', array('jquery'), '1.1', true);
         
         wp_register_script('pagination', IICCA_GALERIAS_URL. 'lib/single-galeria/assets/js/pagination.js', array('jquery'), '1.1', true);
     }
