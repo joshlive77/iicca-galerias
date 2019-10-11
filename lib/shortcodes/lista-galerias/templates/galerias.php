@@ -4,7 +4,7 @@
         <?php $cont = 0; ?>
         <?php foreach ($data as $nombre => $categorias) : ?>
             <li class="ui-state-default ui-tabs-active ">
-                <a href="#cat-<?= $cont++; ?>" class="ui-tabs-anchor" id="ui-id-1"> <?= $nombre ?> </a>
+                <a href="#cat-<?= $cont++; ?>" class="ui-tabs-anchor" id="ui-id-1"> <?= ucwords($nombre) ?> </a>
             </li>
         <?php endforeach; ?>
     </ul>
