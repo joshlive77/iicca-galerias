@@ -91,12 +91,6 @@ class IiccaListaGaleriasSc
      */
     static function wp_bakery_menu()
     {
-        // $taxonomies = array('iicca_gal_cat', array('parent' => 0));
-        
-        // $args = array(
-        //     'hide_empty' => 0
-        // );
-
         // obtiene todas las taxonomias de 'iicca_pub_tipos'
         $types = get_terms( array( 'taxonomy' => 'iicca_gal_cat'));
         $all_terms = array();
@@ -110,17 +104,6 @@ class IiccaListaGaleriasSc
 
         // opciones del menu
         $opciones = array(
-            // array(
-            //     'type'        => 'dropdown',
-            //     'param_name'  => 'columnas',
-            //     'heading'     => esc_html__( 'columnas', 'iicca-galerias-lista' ),
-            //     'value'       => array(
-            //         esc_html__( '3', 'iicca-galerias-lista' )  => '3',
-            //         esc_html__( '4', 'iicca-galerias-lista' )    => '4',
-            //     ),
-            //     'save_always' => true,
-            //     'group'       => esc_html__( 'Configuraciones', 'iicca-galerias-lista' )
-            // ),
             array(
                 'type'        => 'dropdown',
                 'param_name'  => 'filtro',
@@ -172,8 +155,6 @@ class IiccaListaGaleriasSc
         wp_enqueue_style('iicca_cabecera_galeria_style');
         require plugin_dir_path( __FILE__ ) . 'templates/galerias.php';
         wp_enqueue_style('iicca_lista_galerias_style');
-        // require_once plugin_dir_path( __FILE__ ) . 'templates/galeria.php';
-        // wp_enqueue_style('iicca_lista_galeria_style');
     }
 
     /**

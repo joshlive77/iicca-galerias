@@ -15,10 +15,6 @@ class IiccaGaleriaSingle
     function __construct()
     {
         self::data();
-        // Carga los estilos css
-        add_action('wp_enqueue_scripts', [$this, 'styles']);
-        // Carga de scripts
-        add_action('wp_enqueue_scripts', [$this, 'scripts']);
     }
 
     public function data()
@@ -39,8 +35,6 @@ class IiccaGaleriaSingle
             unset($img_object);
         }
 
-        // $imagenes = IiccaGaleriaTools::orderImagenes($imagenes);
-
         self::html($imagenes);
     }
 
@@ -49,15 +43,18 @@ class IiccaGaleriaSingle
         
         if(!empty($data)){
     
-            require IICCA_GALERIA_SP . 'templates/cabecera.php';
-            require IICCA_GALERIA_SP . 'templates/galeria.php';
-    
             // styles
 
             wp_enqueue_style('iicca_cabecera_single_style');
             wp_enqueue_style('iicca_galeria_single_style');
 
             wp_enqueue_style('magnific_popup_style');
+
+            // contenido
+
+            require IICCA_GALERIA_SP . 'templates/cabecera.php';
+            require IICCA_GALERIA_SP . 'templates/galeria.php';
+    
 
             // scripts
 
@@ -69,6 +66,8 @@ class IiccaGaleriaSingle
 
         } else {
             
+            // contenido
+            require IICCA_GALERIA_SP . 'templates/cabecera.php';
             wp_enqueue_style('no_imagen');
 
             ?>
